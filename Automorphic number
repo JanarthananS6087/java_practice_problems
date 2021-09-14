@@ -49,11 +49,11 @@ public class Automorpicnumber {
         int v=reverse(count_1);
         if(number==v)
         {
-            System.out.println("it's a perfect number");
+            System.out.println("it's a Automorphic number");
         }
         else
         {
-            System.out.println("It's not a perfect number");
+            System.out.println("It's not a Automorphic number");
         }
     }
 }
