@@ -1,0 +1,59 @@
+package com.company;
+import java.util.*;
+public class Automorpicnumber {
+
+    static int count(int num)
+    {
+        int count=0;
+        while(num!=0)
+        {
+            count++;
+            num/=10;
+        }
+        return count;
+    }
+    static int result(int var,int result)
+    {
+        int val=0;
+        while(result!=0)
+        {
+            val=(val*10)+var%10;
+            var/=10;
+            result--;
+        }
+        return val;
+    }
+
+    static int reverse(int v)
+    {
+        int Value=0;
+        while(v!=0)
+        {
+            Value=(Value*10)+v%10;
+            v/=10;
+        }
+        return Value;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        int var=1;
+        int Result=count(number);
+        //System.out.println(Result);
+        for(int i=2;0<i;i--)
+        {
+            var=var*number;
+        }
+        int count_1=result(var,Result);
+        int v=reverse(count_1);
+        if(number==v)
+        {
+            System.out.println("it's a perfect number");
+        }
+        else
+        {
+            System.out.println("It's not a perfect number");
+        }
+    }
+}
