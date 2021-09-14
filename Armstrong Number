@@ -1,0 +1,48 @@
+package com.company;
+import java.util.*;
+public class AmstrongNumber {
+
+    static int countValue(int num)
+    {
+        int count=0;
+        while(num!=0)
+        {
+            count++;
+            num/=10;
+        }
+        return count;
+    }
+    static int power(int var,int val)
+    {
+        int reverse_1=1;
+        int sum=0;
+        while(var!=0)
+        {
+            int reverse=var%10;
+            for(int i=val;0<i;i--)
+            {
+                reverse_1=reverse_1*reverse;
+            }
+            sum+=reverse_1;
+            reverse_1=1;
+            var/=10;
+        }
+        //System.out.println(reverse_1);
+        return sum;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        int val=countValue(number);
+        int result=power(number,val);
+        if(number==result) {
+            System.out.println(result);
+        }
+        else
+        {
+            System.out.println("Not a prime number");
+
+        }
+    }
+}
