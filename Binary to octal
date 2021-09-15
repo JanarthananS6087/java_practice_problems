@@ -1,0 +1,32 @@
+package com.company;
+import java.util.*;
+public class binarytooctal {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int binary=sc.nextInt();
+        int n=0;
+        int decimal=0;
+        // logic of change decimal number
+        while(binary!=0)
+        {
+            int temp=binary%10;
+            decimal+=temp*Math.pow(2,n);
+            n++;
+            binary/=10;
+        }
+        int i=0;
+        int array[]=new int[20];
+        // logic of change octal number
+        while(decimal!=0)
+        {
+            int r=decimal%8;
+            array[i++]=r;
+            decimal/=8;
+        }
+        for(int j=i-1;j>=0;j--)
+        {
+            System.out.print(array[j]);
+        }
+    }
+}
