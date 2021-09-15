@@ -1,0 +1,32 @@
+// octal to binary
+package com.company;
+import java.util.*;
+public class octaltobinary {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int octal=sc.nextInt();
+        int[] array =new int[20];
+        int n=0;
+        int decimal=0;
+        while(octal!=0)
+        {
+            int temp=octal%10;
+            decimal+=temp*Math.pow(8,n);
+            n++;
+            octal/=10;
+            //System.out.println(temp);
+        }
+        int i=0;
+        while(decimal!=0)
+        {
+            int r=decimal%2;
+            array[i++]=r;
+            decimal/=2;
+        }
+        for(int j=i-1;j>=0;j--)
+        {
+            System.out.print((array[j]));
+        }
+    }
+}
