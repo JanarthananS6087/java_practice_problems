@@ -1,0 +1,18 @@
+package com.company;
+import java.util.*;
+public class Cheakthealpha {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        char element=sc.next().charAt(0);
+        // logi to check a alphabet or not
+        if(65<=element && element<=122)
+        {
+            System.out.println("alphabet");
+        }
+        else
+        {
+            System.out.println("Not alphabet");
+        }
+    }
+}
