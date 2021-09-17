@@ -1,0 +1,32 @@
+package com.company;
+import java.util.*;
+public class coordinates {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        // get a X and Y coordinates values from user
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        // check the values lie down which coordinates 
+        if(x==0 && y==0)
+        {
+            System.out.println("lies on origin");
+        }
+        else if(x>0 && y>0)
+        {
+            System.out.println("lies on the first origin");
+        }
+        else if(x<0 && y>0)
+        {
+            System.out.println("lies on the second origin");
+        }
+        else if(x<0 && y<0)
+        {
+            System.out.println("lies on the third origin");
+        }
+        else if(x>0 && y<0)
+        {
+            System.out.println("lies on the fourth origin");
+        }
+    }
+}
