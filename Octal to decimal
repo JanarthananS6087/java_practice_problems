@@ -1,0 +1,21 @@
+package com.company;
+import java.util.*;
+public class octaltodecimal {
+    public static void main(String[] args)
+    {
+    // give a octal number
+        Scanner sc=new Scanner(System.in);
+        int octal=sc.nextInt();
+        int decimal=0;
+        int n=0;
+     // logic to change a deimal number
+        while(octal!=0)
+        {
+            int temp=octal%10;
+            decimal+=temp*Math.pow(8,n);
+            n++;
+            octal/=10;
+        }
+        System.out.print(decimal);
+    }
+}
