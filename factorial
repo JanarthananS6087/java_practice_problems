@@ -1,0 +1,20 @@
+package com.company;
+import java.util.*;
+public class factorial {
+
+    static int factorialNumber(int factNumber) {
+        if (factNumber == 1)
+            return factNumber;
+        else {
+            return factNumber * factorialNumber(factNumber - 1);
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int factNumber=sc.nextInt();
+        int total=factorialNumber(factNumber);
+        System.out.println(total);
+    }
+
+}
