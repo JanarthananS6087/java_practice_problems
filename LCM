@@ -1,0 +1,18 @@
+package com.company;
+import java.util.*;
+public class LCM {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        int number_1=sc.nextInt();
+        int i;
+        int a=(number>number_1)? number: number_1;
+        for( i=a; i<=number*number_1; i=i+a)
+        {
+            if(i%number==0 && i%number_1==0)
+                break;
+        }
+        System.out.println(i);
+    }
+}
