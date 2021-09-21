@@ -1,0 +1,29 @@
+package com.company;
+import java.util.*;
+public class HCF {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        int number_1=sc.nextInt();
+        int n=1;
+        if(number!=number_1)
+        {
+            while(n!=0)
+            {
+                n=number%number_1;
+                if(n!=0)
+                {
+                    number=number_1;
+                    number_1=n;
+                }
+            }
+            System.out.println(number_1);
+        }
+        else
+        {
+            System.out.println("Wrong");
+        }
+    }
+
+}
