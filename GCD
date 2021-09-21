@@ -1,0 +1,23 @@
+package com.company;
+import java.util.*;
+public class GCD {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int gcd=sc.nextInt();
+        int gcd_1=sc.nextInt();
+        int n=1;
+        if(gcd!=gcd_1)
+        {
+            while(n!=0)
+            {
+                n=gcd%gcd_1;
+                if(n!=0) {
+                    gcd = gcd_1;
+                    gcd_1 = n;
+                }
+            }
+            System.out.println(gcd_1 );
+        }
+    }
+}
