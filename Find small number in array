@@ -1,0 +1,23 @@
+package com.company;
+import java.util.*;
+public class findSmallinArray {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int element=sc.nextInt();
+        int[] arr=new int[element];
+        for(int i=0;i<element;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int min=arr[0];
+        for(int j=0;j<element;j++)
+        {
+            if(min>arr[j])
+            {
+                min=arr[j];
+            }
+        }
+        System.out.println(min);
+    }
+}
