@@ -1,0 +1,13 @@
+package com.company;
+import java.util.*;
+public class timeTodegree {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int hour = sc.nextInt();
+        int min = sc.nextInt();
+        int angleofhour=hour*30;
+        int dev= (int) (min*(float)0.5);
+        int angleofmin=(min*6);
+        System.out.println((angleofhour+dev)-angleofmin);
+    }
+}
