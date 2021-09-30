@@ -1,0 +1,45 @@
+package com.company;
+import java.util.*;
+public class prime_in_array {
+    static void primeOrnot(int[] arr, int k)
+    {
+
+        int temp=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            int count=0;
+            for(int j=2;j<=arr[i];j++)
+            {
+                if(arr[i]%j==0)
+                {
+                    count++;
+                }
+            }
+            if(count==1)
+            {
+                temp++;
+            }
+        }
+        if(k<temp)
+        {
+            System.out.println("yes");
+        }
+        else
+        {
+            System.out.println("No");
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int element=sc.nextInt();
+        int k=sc.nextInt();
+        int[] arr=new int[element];
+        for(int i=0;i<element;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        primeOrnot(arr, k);
+    }
+}
