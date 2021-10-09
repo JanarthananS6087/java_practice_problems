@@ -1,0 +1,27 @@
+package com.company;
+import java.util.*;
+public class permutetion{
+
+    static int factorial(int num)
+    {
+        if(num==1)
+        {
+            return 1;
+        }
+        else
+        {
+            return num * factorial(num-1);
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int Total=sc.nextInt();
+        int weHave=sc.nextInt();
+        int result=factorial(Total);
+        int result_1=factorial(Total-weHave);
+        int result_2=result/result_1;
+        System.out.println(result_2+" "+ "ways");
+    }
+}
