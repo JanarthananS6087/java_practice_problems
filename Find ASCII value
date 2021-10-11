@@ -1,0 +1,12 @@
+package com.company;
+import java.util.*;
+public class FindASCIIvalue {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        char element=sc.next().charAt(0);
+        // type casting use to change alphabet into ASCII value
+        int i=element;
+        System.out.println("ASCII VALUE OF"+" "+element+ " "+"is"+" "+i);
+    }
+}
