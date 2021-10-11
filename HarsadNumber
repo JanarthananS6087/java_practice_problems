@@ -1,0 +1,28 @@
+package com.company;
+import java.util.*;
+public class HarsadNumber {
+    static int count(int num)
+    {
+        int value=0;
+        while(num!=0)
+        {
+            value+=num%10;
+            num/=10;
+        }
+        return value;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        int sum=count(number);
+        if(number%sum==0)
+        {
+            System.out.println("HarsadNumber");
+        }
+        else
+        {
+            System.out.println("Not a HarsadNumber");
+        }
+    }
+}
